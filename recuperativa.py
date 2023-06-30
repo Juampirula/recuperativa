@@ -9,26 +9,26 @@ def mostrar_menu():
 
 def grabar_producto():
     print("👻👻👻 GRABAR PRODUCTO 👻👻👻")
-    numero_parte = input("Ingrese el número de parte: ")
+    numero_parte = input("escriba el numero del parte: ")
 
     for producto in productos:
         if producto[0] == numero_parte:
-            print("El número de parte ya existe. Intente nuevamente.")
+            print("este numero ya a sidi registrado")
             return
 
-    nombre_producto = input("Ingrese el nombre del producto (mínimo 6 caracteres): ")
+    nombre_producto = input("Ingrese un nombte para el producto de minimo 6 caracteres): ")
     if len(nombre_producto) < 6:
-        print("El nombre del producto debe tener al menos 6 caracteres. Intente nuevamente.")
+        print("El nombre del producto debe tener 6 caracteres, intente nuevamente.")
         return
 
-    precio_producto = float(input("Ingrese el precio del producto (mayor a 0): "))
+    precio_producto = float(input("Ingrese el precio del producto "))
     if precio_producto <= 0:
-        print("El precio del producto debe ser mayor a 0. Intente nuevamente.")
+        print("El precio del producto debe ser mayor a 0, intente nuevamente.")
         return
 
     producto = (numero_parte, nombre_producto, precio_producto)
     productos.append(producto)
-    print("Producto grabado exitosamente.")
+    print("Producto guardado con exito 👻.")
 
 def buscar_producto():
     print("👻👻👻 BUSCAR PRODUCTO 👻👻👻")
@@ -63,7 +63,7 @@ def imprimir_productos():
         print("No hay productos para imprimir.")
         return
 
-    print("Reporte de productos:")
+    print("Reporte productos:")
     for i, producto in enumerate(productos, start=1):
         print(f"👻👻👻 Producto {i} 👻👻👻")
         print("Número de parte:", producto[0])
@@ -84,4 +84,4 @@ while True:
         print("¡Hasta luego!, amigo insano 👻👻👻")
         break
     else:
-        print("Opción inválida. Intente nuevamente.")
+        print("Opción inválida intente nuevamente.")
